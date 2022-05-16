@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Vsl test",
   "main": "index.js",
-  "git": "https://github.com/ojha32636/vslstudio",
+  
   "scripts": {
     "pretest": "rimraf -r ./cypress/reports/*.json",
     "test": "npm run cypress-test || npm run posttest",
