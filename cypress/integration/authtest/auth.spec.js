@@ -2,7 +2,9 @@
 import global from '../../../cypress.json'
 import loginPage from '../../pages/auth/login'
 
+//Visibility verification
 describe("verify elements showing or not", () => {
+    const loginpage = new loginPage();
     it("verify showing title or not", () => {
         cy.visit(global.baseurl);
         cy.title().should('eq', 'VSL Studio - Login');
@@ -12,6 +14,14 @@ describe("verify elements showing or not", () => {
     })
     it("verify showing forgot password or not", () => {
         cy.contains('Forgot Password').should('be.visible');
+    })
+    it("verify placeholder message for email", () => {
+
+        loginpage.readplmessageemail('Enter your email');
+    })
+    it("verify placeholder message for password", () => {
+
+        loginpage.readplmessagepass('Enter your password');
     })
 })
 
@@ -24,6 +34,7 @@ describe("login test", () => {
     it("verify login for blank", () => {
         // cy.visit(global.baseurl);
         // cy.title().should('eq','VSL Studio - Login');
+        loginpage.enteremail.invoke('attr', 'placeholder').should('contain', 'Enter Your Email')
         loginpage.enteremail(' ');
         loginpage.password(' ');
         loginpage.button();
