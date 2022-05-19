@@ -1,8 +1,9 @@
 /// <reference types= "Cypress" />
-import global from '../../../cypress.json'
+import global from '../../../../cypress.json'
 import loginPage from '../../pages/auth/login'
 
-//Visibility verification
+//***********************************Visibility verification*******************************************
+
 describe("verify elements showing or not", () => {
     const loginpage = new loginPage();
     it("verify showing title or not", () => {
@@ -25,6 +26,7 @@ describe("verify elements showing or not", () => {
     })
 })
 
+//*********************************Functional Testing*****************************************************
 
 describe("login test", () => {
 
