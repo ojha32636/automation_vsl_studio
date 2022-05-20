@@ -25,8 +25,16 @@
 
 
 
+
+
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 Cypress.Commands.add('checkToastMessage', (message) => {
     cy.get('.Toastify__toast').should('be.visible').invoke('text').should('eq', message);
     
 });
+Cypress.Commands.add('login',()=>{
+    cy.visit('https://www.vslstudio.io/login')
+    cy.xpath('//input[@name="email"]').clear().type('omprakash.jha@himanshusofttech.com');
+    cy.xpath('//input[@name="password"]').clear().type('123456');
+    cy.get('.vsl_btn').click()
+})
