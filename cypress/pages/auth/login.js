@@ -7,7 +7,7 @@ class loginPage {
         return this;
     }
     readplmessageemail(plmessage) {
-        cy.xpath('//input[@name="email"]').invoke('attr', 'placeholder').should('contain', plmessage);
+        cy.xpath('//input[@name="email"]').invoke('attr', 'placeholder').should('eq', plmessage);
         return this;
     }
 
@@ -18,7 +18,7 @@ class loginPage {
         return this;
     }
     readplmessagepass(plmessage) {
-        cy.xpath('//input[@name="password"]').invoke('attr', 'placeholder').should('contain', plmessage);
+        cy.xpath('//input[@name="password"]').invoke('attr', 'placeholder').should('eq', plmessage);
         return this;
     }
 

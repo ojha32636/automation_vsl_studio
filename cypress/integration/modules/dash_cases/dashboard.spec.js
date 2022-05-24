@@ -27,4 +27,11 @@ describe("verify the dashboard items",()=>{
         
         
     })
+    it ("verify showing load more or not", ()=>{
+        cy.contains('Load More').should('be.visible');
+    })
+    it("verify showing create button or not", ()=>{
+        cy.contains('Create Video').should('be.visible');
+    })
+
 })
