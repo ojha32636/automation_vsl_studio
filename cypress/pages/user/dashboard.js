@@ -32,7 +32,7 @@ class dashboardloc{
         return this();
     }
     createbutton(){
-        cy.xpath("//button[contains(text(),'+ Create Video')]");
+        cy.get("div[class='vsl_aditional_btns'] button[type='button']");
         return this();
     }
     eletitle(){

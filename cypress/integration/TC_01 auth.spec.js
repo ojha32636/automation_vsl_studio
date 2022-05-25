@@ -1,5 +1,5 @@
 /// <reference types= "Cypress" />
-import global from '../../../../cypress.json'
+import global from '../../cypress.json'
 import loginPage from '../../pages/auth/login'
 
 //***********************************Visibility verification*******************************************

@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
-import global from '../../../../cypress.json'
-import forgotPasswordPage from '../../../pages/auth/forgotpassword'
-import loginPage from '../../../pages/auth/login';
+import global from '../../cypress.json'
+import forgotPasswordPage from '../pages/auth/forgotpassword'
+import loginPage from '../pages/auth/login';
 describe("verify the behaviour of forgotpassword page", () => {
     //const loginpage = new loginPage();
     const forgotloc = new forgotPasswordPage();

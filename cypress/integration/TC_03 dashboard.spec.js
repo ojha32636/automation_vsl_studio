@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import dashboardloc from "../../../pages/user/dashboard";
+import dashboardloc from "../pages/user/dashboard";
 
 
 describe("verify the dashboard items",()=>{
