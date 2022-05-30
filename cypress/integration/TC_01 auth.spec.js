@@ -1,6 +1,6 @@
 /// <reference types= "Cypress" />
 import global from '../../cypress.json'
-import loginPage from '../../pages/auth/login'
+import loginPage from '../pages/auth/login'
 
 //***********************************Visibility verification*******************************************
 
@@ -32,10 +32,9 @@ describe("login test", () => {
 
     //Object Creation for PageObject Page Class and assigning it to a constant variable
     const loginpage = new loginPage();
+    //******** */
 
     it("verify login for blank", () => {
-        // cy.visit(global.baseurl);
-        // cy.title().should('eq','VSL Studio - Login');
         loginpage.enteremail.invoke('attr', 'placeholder').should('contain', 'Enter Your Email')
         loginpage.enteremail(' ');
         loginpage.password(' ');

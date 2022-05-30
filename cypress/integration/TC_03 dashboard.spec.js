@@ -6,9 +6,9 @@ import dashboardloc from "../pages/user/dashboard";
 describe("verify the dashboard items",()=>{
     //Object Creation for PageObject Page Class and assigning it to a constant variable
     const dashloc = new dashboardloc();
-    it("login first",()=>{
-        cy.login();
-    })
+    // it("login first",()=>{
+    //     cy.login();
+    // })
     it("verify showing menu items or not",()=>{
         // cy.contains('My Videos').should('be.visible');
         // cy.contains('Templates').should('be.visible');

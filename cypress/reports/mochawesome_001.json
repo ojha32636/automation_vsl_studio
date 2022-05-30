@@ -1,0 +1,178 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 0,
+    "pending": 0,
+    "failures": 4,
+    "start": "2022-05-30T05:32:54.020Z",
+    "end": "2022-05-30T05:33:11.986Z",
+    "duration": 17966,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f5279fbd-f1b4-467d-a114-b1e8dfdacca6",
+      "title": "",
+      "fullFile": "cypress/integration/TC_03 dashboard.spec.js",
+      "file": "cypress/integration/TC_03 dashboard.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "52cc3064-45a9-4965-8269-2d8b285e3dd5",
+          "title": "verify the dashboard items",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify showing menu items or not",
+              "fullTitle": "verify the dashboard items verify showing menu items or not",
+              "timedOut": null,
+              "duration": 4492,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// cy.contains('My Videos').should('be.visible');\n// cy.contains('Templates').should('be.visible');\n// cy.contains('Agency Users').should('be.visible');\ncy.get('.Header_vsl_header_menu__6j3bB > ul > li').should($limenu => {\n  expect($limenu, '3 items');\n  expect($limenu.eq(0)).to.contain('My Videos');\n  expect($limenu.eq(1)).to.contain('Templates');\n  expect($limenu.eq(2)).to.contain('Agency Users');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.Header_vsl_header_menu__6j3bB > ul > li`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.Header_vsl_header_menu__6j3bB > ul > li`, but never found it.\n    at Context.eval (http://localhost:53055/__cypress/tests?p=cypress\\integration\\TC_03%2520dashboard.spec.js:114:56)",
+                "diff": null
+              },
+              "uuid": "d0ac8fa2-e5fa-43be-b6be-122ec79206ff",
+              "parentUUID": "52cc3064-45a9-4965-8269-2d8b285e3dd5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify showing logo or not",
+              "fullTitle": "verify the dashboard items verify showing logo or not",
+              "timedOut": null,
+              "duration": 4387,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.Header_vsl_header_logo__yVLZd').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.Header_vsl_header_logo__yVLZd`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.Header_vsl_header_logo__yVLZd`, but never found it.\n    at Context.eval (http://localhost:53055/__cypress/tests?p=cypress\\integration\\TC_03%2520dashboard.spec.js:122:46)",
+                "diff": null
+              },
+              "uuid": "98871fb7-8553-4b04-9a94-4582471da236",
+              "parentUUID": "52cc3064-45a9-4965-8269-2d8b285e3dd5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify showing load more or not",
+              "fullTitle": "verify the dashboard items verify showing load more or not",
+              "timedOut": null,
+              "duration": 4422,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Load More').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Load More' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Load More' but never did.\n    at Context.eval (http://localhost:53055/__cypress/tests?p=cypress\\integration\\TC_03%2520dashboard.spec.js:125:30)",
+                "diff": null
+              },
+              "uuid": "9f4c58e8-9d64-480c-bb09-268ae6fb4844",
+              "parentUUID": "52cc3064-45a9-4965-8269-2d8b285e3dd5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify showing create button or not",
+              "fullTitle": "verify the dashboard items verify showing create button or not",
+              "timedOut": null,
+              "duration": 4354,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Create Video').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Create Video' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Create Video' but never did.\n    at Context.eval (http://localhost:53055/__cypress/tests?p=cypress\\integration\\TC_03%2520dashboard.spec.js:128:33)",
+                "diff": null
+              },
+              "uuid": "6607f859-bd9a-4308-9f18-a8fac1a4a241",
+              "parentUUID": "52cc3064-45a9-4965-8269-2d8b285e3dd5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d0ac8fa2-e5fa-43be-b6be-122ec79206ff",
+            "98871fb7-8553-4b04-9a94-4582471da236",
+            "9f4c58e8-9d64-480c-bb09-268ae6fb4844",
+            "6607f859-bd9a-4308-9f18-a8fac1a4a241"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 17655,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

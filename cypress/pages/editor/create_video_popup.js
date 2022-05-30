@@ -3,10 +3,15 @@ class createvideoloc {
         cy.get(".vsl_popup_wrapper");
         return this;
     }
+    createbtn() {
+        cy.get("div[class='vsl_aditional_btns'] button[type='button']").click();
+        return this;
+
+    }
     popuptitle(title) {
         cy.get("input[name = 'name']")
             .clear().type(title).click();
-            return this;
+        return this;
 
     }
     popuptitleplmessage(plmessage) {
@@ -14,13 +19,13 @@ class createvideoloc {
         return this;
 
     }
-    
+
     layoutpop() {
-        cy.get("div[data-layout='square']");
+        cy.get("div[data-layout='square']").click();
         return this;
     }
     createvideopopup() {
-        cy.get("div[class='vsl_video_layout_btn'] button[type='button']");
+        cy.get("div[class='vsl_video_layout_btn'] button[type='button']").click();
         return this;
     }
 }

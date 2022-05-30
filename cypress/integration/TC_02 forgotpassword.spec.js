@@ -7,7 +7,7 @@ describe("verify the behaviour of forgotpassword page", () => {
     const forgotloc = new forgotPasswordPage();
 
     it("verify redirecting to forgotpassword page or not", () => {
-        cy.visit(global.baseurl);
+       // cy.visit(global.baseurl);
         forgotloc.forgot();
         cy.title().should('eq', 'VSL Studio - Forgot Password');
     })

@@ -1,0 +1,155 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2022-05-30T05:33:18.902Z",
+    "end": "2022-05-30T05:33:24.222Z",
+    "duration": 5320,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "41c0ab81-45e5-4e7d-9442-25469686cfb2",
+      "title": "",
+      "fullFile": "cypress/integration/TC_04 createvideo.spec.js",
+      "file": "cypress/integration/TC_04 createvideo.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b40b3276-2729-4169-ba03-9da924205615",
+          "title": "verify the functionality of create video button",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify clickable or not",
+              "fullTitle": "verify the functionality of create video button verify clickable or not",
+              "timedOut": null,
+              "duration": 432,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// cy.wait(10000);\ndashloc.createbutton.click();\npopuploc.popupwrapper.should('be.visible');",
+              "err": {
+                "message": "TypeError: dashloc.createbutton.click is not a function",
+                "estack": "TypeError: dashloc.createbutton.click is not a function\n    at Context.eval (http://localhost:53055/__cypress/tests?p=cypress\\integration\\TC_04%2520createvideo.spec.js:116:26)",
+                "diff": null
+              },
+              "uuid": "5dd11b6a-c785-47d0-8142-f303ba251895",
+              "parentUUID": "b40b3276-2729-4169-ba03-9da924205615",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify popup for blank title",
+              "fullTitle": "verify the functionality of create video button verify popup for blank title",
+              "timedOut": null,
+              "duration": 4304,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "popuploc.popuptitle(' {enter}'); //cy.checktoastmessage(\"Please enter title\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name = 'name']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name = 'name']`, but never found it.\n    at createvideoloc.popuptitle (http://localhost:53055/__cypress/tests?p=cypress\\integration\\TC_04%2520createvideo.spec.js:153:8)\n    at Context.eval (http://localhost:53055/__cypress/tests?p=cypress\\integration\\TC_04%2520createvideo.spec.js:120:14)",
+                "diff": null
+              },
+              "uuid": "ad99d308-e435-4902-8623-3857542e04fe",
+              "parentUUID": "b40b3276-2729-4169-ba03-9da924205615",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify popup with title",
+              "fullTitle": "verify the functionality of create video button verify popup with title",
+              "timedOut": null,
+              "duration": 383,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "popuploc.popuptitle('my new 1 auto');\npopuploc.layoutpop.click();\npopuploc.createvideopopup.click(); //cy.checktoastmessage(\"Video created successfully\");",
+              "err": {
+                "message": "TypeError: popuploc.layoutpop.click is not a function",
+                "estack": "TypeError: popuploc.layoutpop.click is not a function\n    at Context.eval (http://localhost:53055/__cypress/tests?p=cypress\\integration\\TC_04%2520createvideo.spec.js:124:24)",
+                "diff": null
+              },
+              "uuid": "f5a69072-07bd-4393-87b3-f06405b878f1",
+              "parentUUID": "b40b3276-2729-4169-ba03-9da924205615",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5dd11b6a-c785-47d0-8142-f303ba251895",
+            "ad99d308-e435-4902-8623-3857542e04fe",
+            "f5a69072-07bd-4393-87b3-f06405b878f1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5119,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

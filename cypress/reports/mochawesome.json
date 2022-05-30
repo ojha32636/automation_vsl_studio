@@ -1,0 +1,244 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 1,
+    "pending": 0,
+    "failures": 6,
+    "start": "2022-05-30T05:32:15.778Z",
+    "end": "2022-05-30T05:32:44.517Z",
+    "duration": 28739,
+    "testsRegistered": 7,
+    "passPercent": 14.285714285714285,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d0c76a46-8995-4e28-8e82-a7af23e496c8",
+      "title": "",
+      "fullFile": "cypress/integration/TC_02 forgotpassword.spec.js",
+      "file": "cypress/integration/TC_02 forgotpassword.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "de18f008-6fed-491b-8ca2-62c600bf1843",
+          "title": "verify the behaviour of forgotpassword page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify redirecting to forgotpassword page or not",
+              "fullTitle": "verify the behaviour of forgotpassword page verify redirecting to forgotpassword page or not",
+              "timedOut": null,
+              "duration": 5193,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(_cypress.default.baseurl);\nforgotloc.forgot();\ncy.title().should('eq', 'VSL Studio - Forgot Password');",
+              "err": {},
+              "uuid": "a487618a-5351-4628-a2ba-946c13605e2c",
+              "parentUUID": "de18f008-6fed-491b-8ca2-62c600bf1843",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate email for blank",
+              "fullTitle": "verify the behaviour of forgotpassword page validate email for blank",
+              "timedOut": null,
+              "duration": 616,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "forgotloc.forgotemail().invoke('text');\nforgotloc.button();\ncy.checkToastMessage('Please enter email');\ncy.title().should('eq', 'VSL Studio - Forgot Password');",
+              "err": {
+                "message": "TypeError: forgotloc.forgotemail(...).invoke is not a function",
+                "estack": "TypeError: forgotloc.forgotemail(...).invoke is not a function\n    at Context.eval (https://www.vslstudio.io/__cypress/tests?p=cypress\\integration\\TC_02%2520forgotpassword.spec.js:128:29)",
+                "diff": null
+              },
+              "uuid": "4432b8eb-3eea-44fe-87b5-bbe9b4629932",
+              "parentUUID": "de18f008-6fed-491b-8ca2-62c600bf1843",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate email for invalid email",
+              "fullTitle": "verify the behaviour of forgotpassword page validate email for invalid email",
+              "timedOut": null,
+              "duration": 4593,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "forgotloc.enteremail('omprakash.jhapixlnx.com');\nforgotloc.button();\ncy.checkToastMessage('Please enter valid email');\ncy.title().should('eq', 'VSL Studio - Forgot Password');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@name=\"email\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@name=\"email\"]`, but never found it.\n    at forgotPasswordPage.enteremail (https://www.vslstudio.io/__cypress/tests?p=cypress\\integration\\TC_02%2520forgotpassword.spec.js:221:8)\n    at Context.eval (https://www.vslstudio.io/__cypress/tests?p=cypress\\integration\\TC_02%2520forgotpassword.spec.js:134:15)",
+                "diff": null
+              },
+              "uuid": "8db60573-53a8-43e6-b5b0-d2bc26310ee1",
+              "parentUUID": "de18f008-6fed-491b-8ca2-62c600bf1843",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate email for unregistered email",
+              "fullTitle": "verify the behaviour of forgotpassword page validate email for unregistered email",
+              "timedOut": null,
+              "duration": 4401,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "forgotloc.enteremail('omprakash.jha@himanshusofttech.com');\nforgotloc.button();\ncy.checkToastMessage('This email is not registered with us');\ncy.title().should('eq', 'VSL Studio - Forgot Password');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@name=\"email\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@name=\"email\"]`, but never found it.\n    at forgotPasswordPage.enteremail (https://www.vslstudio.io/__cypress/tests?p=cypress\\integration\\TC_02%2520forgotpassword.spec.js:221:8)\n    at Context.eval (https://www.vslstudio.io/__cypress/tests?p=cypress\\integration\\TC_02%2520forgotpassword.spec.js:140:15)",
+                "diff": null
+              },
+              "uuid": "2ea449c1-7660-4cde-8436-c75171672181",
+              "parentUUID": "de18f008-6fed-491b-8ca2-62c600bf1843",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate removing space or not",
+              "fullTitle": "verify the behaviour of forgotpassword page validate removing space or not",
+              "timedOut": null,
+              "duration": 4423,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "forgotloc.enteremail(' omprakash.jha@himanshusofttech.com');\nforgotloc.button();\ncy.checkToastMessage('This email is not registered with us');\ncy.title().should('eq', 'VSL Studio - Forgot Password');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@name=\"email\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@name=\"email\"]`, but never found it.\n    at forgotPasswordPage.enteremail (https://www.vslstudio.io/__cypress/tests?p=cypress\\integration\\TC_02%2520forgotpassword.spec.js:221:8)\n    at Context.eval (https://www.vslstudio.io/__cypress/tests?p=cypress\\integration\\TC_02%2520forgotpassword.spec.js:146:15)",
+                "diff": null
+              },
+              "uuid": "e53a054d-637c-417c-b7df-e4e838a2b525",
+              "parentUUID": "de18f008-6fed-491b-8ca2-62c600bf1843",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate for valid email",
+              "fullTitle": "verify the behaviour of forgotpassword page validate for valid email",
+              "timedOut": null,
+              "duration": 4446,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "forgotloc.enteremail(' omprakash.jha@pixelnx.com');\nforgotloc.button();\ncy.checkToastMessage('We have sent an email, please check your email');\ncy.title().should('eq', 'VSL Studio - Forgot Password');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@name=\"email\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@name=\"email\"]`, but never found it.\n    at forgotPasswordPage.enteremail (https://www.vslstudio.io/__cypress/tests?p=cypress\\integration\\TC_02%2520forgotpassword.spec.js:221:8)\n    at Context.eval (https://www.vslstudio.io/__cypress/tests?p=cypress\\integration\\TC_02%2520forgotpassword.spec.js:152:15)",
+                "diff": null
+              },
+              "uuid": "7ae0370a-0f4f-4d52-a381-749948c50baa",
+              "parentUUID": "de18f008-6fed-491b-8ca2-62c600bf1843",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "varify back to login",
+              "fullTitle": "verify the behaviour of forgotpassword page varify back to login",
+              "timedOut": null,
+              "duration": 508,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "forgotloc.backtologin();\ncy.title().should('eq', 'VSL Studio - Login');",
+              "err": {
+                "message": "CypressError: Oops, it looks like you are trying to call a child command before running a parent command.\n\nYou wrote code that looks like this:\n\n``cy.click()``\n\nA child command must be chained after a parent because it operates on a previous subject.\n\nFor example - if we were issuing the child command `click`...\n\ncy\n  .get('button') // parent command must come first\n  .click()       // then child command comes second",
+                "estack": "CypressError: Oops, it looks like you are trying to call a child command before running a parent command.\n\nYou wrote code that looks like this:\n\n``cy.click()``\n\nA child command must be chained after a parent because it operates on a previous subject.\n\nFor example - if we were issuing the child command `click`...\n\ncy\n  .get('button') // parent command must come first\n  .click()       // then child command comes second\n    at $Cy.pushSubjectAndValidate (https://www.vslstudio.io/__cypress/runner/cypress_runner.js:178632:70)\n    at Context.<anonymous> (https://www.vslstudio.io/__cypress/runner/cypress_runner.js:178135:19)\nFrom Your Spec Code:\n    at forgotPasswordPage.backtologin (https://www.vslstudio.io/__cypress/tests?p=cypress\\integration\\TC_02%2520forgotpassword.spec.js:187:8)\n    at Context.eval (https://www.vslstudio.io/__cypress/tests?p=cypress\\integration\\TC_02%2520forgotpassword.spec.js:158:15)",
+                "diff": null
+              },
+              "uuid": "7aab2d78-1054-4b33-a110-befaebc571a9",
+              "parentUUID": "de18f008-6fed-491b-8ca2-62c600bf1843",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a487618a-5351-4628-a2ba-946c13605e2c"
+          ],
+          "failures": [
+            "4432b8eb-3eea-44fe-87b5-bbe9b4629932",
+            "8db60573-53a8-43e6-b5b0-d2bc26310ee1",
+            "2ea449c1-7660-4cde-8436-c75171672181",
+            "e53a054d-637c-417c-b7df-e4e838a2b525",
+            "7ae0370a-0f4f-4d52-a381-749948c50baa",
+            "7aab2d78-1054-4b33-a110-befaebc571a9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 24180,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
