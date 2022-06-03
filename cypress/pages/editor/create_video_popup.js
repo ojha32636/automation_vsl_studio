@@ -25,7 +25,7 @@ class createvideoloc {
         return this;
     }
     createvideopopup() {
-        cy.get("div[class='vsl_video_layout_btn'] button[type='button']").click();
+        cy.get("div[class='vsl_video_layout_btn'] button[type='button']");
         return this;
     }
 }
