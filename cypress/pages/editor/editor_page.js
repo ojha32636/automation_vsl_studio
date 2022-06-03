@@ -1,7 +1,7 @@
 class editorPage{
 editorlogo(){
-    cy.get("img[src='/_next/image?url=%2Fimages%2Flogo.svg&w=384&q=75']");
-    return this();
+    cy.get(" img[src='/_next/image?url=%2Fimages%2Flogo.svg&w=384&q=75']");
+    return this;
 }
 resizebtn(){
     cy.get("div[class='Header_vsl_editor_header_logo__3hogh'] button[class='vsl_btn']");
@@ -90,7 +90,5 @@ editbtn(){
     cy.get(".timeFrameDurationEdit.vsl_btn");
     return this();
 }
-
-
-
 }
+export default editorPage;

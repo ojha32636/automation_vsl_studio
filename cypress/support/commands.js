@@ -24,7 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-import { beforeEach } from "mocha";
+
 
 
 
@@ -36,16 +36,19 @@ Cypress.Commands.add('checkToastMessage', (message) => {
 //************************************For login********************/
 
 Cypress.Commands.add('login', () => {
-    cy.visit('https://www.vslstudio.io/login')
-    cy.xpath('//input[@name="email"]').clear().type('omprakash.jha@himanshusofttech.com');
-    cy.xpath('//input[@name="password"]').clear().type('123456');
-    cy.get('.vsl_btn').click();
-  
-});
+    cy.visit('https://www.vslstudio.io/login');
+    // cy.xpath('//input[@name="email"]').clear().type('omprakash.jha@himanshusofttech.com');
+    // cy.xpath('//input[@name="password"]').clear().type('123456');
+    // cy.get('.vsl_btn').click();
+});  
+
 
 beforeEach(()=>{
-   cy.setCookie('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxN2E0MGJiMzViNDBhMWYyMDRlOWVkZiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU0MTcwMzc1LCJleHAiOjE2NTQyNTY3NzV9.zkvqqOpOmpkUMn9dTTJsiyiq36X7SrhpzWmaGmKcrEU' );
+  cy.setCookie('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxN2E0MGJiMzViNDBhMWYyMDRlOWVkZiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU0MjM4MzM3LCJleHAiOjE2NTQzMjQ3Mzd9.e1thw_EbP6L83RYC2kEP0Cmx9y0c0ORQPkIsWZBeJYo' );
 })
+
+
+
 //*********For JWT token */
 // let tkn = '';
 
