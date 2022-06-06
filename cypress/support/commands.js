@@ -44,7 +44,7 @@ Cypress.Commands.add('login', () => {
 
 
 beforeEach(()=>{
-  cy.setCookie('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxN2E0MGJiMzViNDBhMWYyMDRlOWVkZiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU0MjM4MzM3LCJleHAiOjE2NTQzMjQ3Mzd9.e1thw_EbP6L83RYC2kEP0Cmx9y0c0ORQPkIsWZBeJYo' );
+  cy.setCookie('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxN2E0MGJiMzViNDBhMWYyMDRlOWVkZiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU0NDk3NDU5LCJleHAiOjE2NTQ1ODM4NTl9.EHutwZ08aTYUAoaaMNsmrMzwtqdyMo7YGqfedRPaBm0' );
 })
 
 

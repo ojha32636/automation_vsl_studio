@@ -2,7 +2,7 @@
 import global from '../../cypress.json'
 import loginPage from '../pages/auth/login'
 
-//***********************************Visibility verification*******************************************
+//***********************************Visual verification*******************************************
 
 describe("verify elements showing or not", () => {
     const loginpage = new loginPage();
